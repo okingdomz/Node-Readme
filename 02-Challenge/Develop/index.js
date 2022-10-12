@@ -26,7 +26,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "What license is being used?",
-    choice: ['None', 'Apache', 'MIT', 'GPL', 'ISC']
+    choices: ['None', 'Apache', 'MIT', 'GPL', 'ISC']
 },{
     type: "input",
     message: "What does the user needs to install the app?",
@@ -87,7 +87,7 @@ const writeToFile = fileContent => {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPromptModule(questions)
+    inquirer.prompt(questions)
         .then(function(answer) {
             console.log(answer);
         var fileContent = generateMarkdown(answer);
