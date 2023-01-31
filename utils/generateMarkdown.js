@@ -2,7 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const index = require('../index.js');
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+
 // If there is no license, return an empty string
 
 function renderLicenseBadge(license) {
@@ -22,7 +22,7 @@ function renderLicenseBadge(license) {
   return badge;
 }
 
-// TODO: Create a function that returns the license link
+
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let licenseSection = '';
@@ -42,14 +42,6 @@ function renderLicenseLink(license) {
   return licenceLink;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {
-//   if (license != 'none') {
-//     return `## License
-//     This Project is Licensed under`
-//   }
-// }
 
 //  returns license section of readme , esoecially if there is no license or returns as an empty section
 function renderLicenseSection(license) {
@@ -61,58 +53,52 @@ function renderLicenseSection(license) {
     `License: ${license}`
   } return licenseSection;
 }
-// TODO: Create a function to generate markdown for README
+
 function generateMarkdown(answer) {
 
   return `
   
   # ${answer.title},
-
   ## ${renderLicenseSection(answer.license)} ${renderLicenseBadge(answer.license)}
-
-
   ## Table of Contents:
+
   ### * [Description](#description)
+
+
   ### * [Tests](#tests)
+
+
   ### * [Installation](#installation)
+
+
   ### * [Questions](#questions)
+
+
   ### * [Usage](#usage)
+
+
   ### * [Contributon](#contribution)
    
    
    
   ## Description
   ### ${answer.description}
-
   ## Installation
   ### ${answer.installation}
-
   ## Usage
   ### ${answer.usage}
-
   ## Innovation
   ### ${answer.innovation}
-
   
-
  
-
-
   ## Contribution
   ${answer.contribution}
-
   ## Test
   ${answer.tests}
-
-
   ## Questions
   [Screenify Walkthrough]
   Additional Questions can be sent to: ${answer.email}
-
   Other Projects can be viewed [here](www.github.com/${answer.github})
-
-
-
 `;
 }
 
