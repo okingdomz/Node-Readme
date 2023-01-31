@@ -96,7 +96,7 @@ function generateMarkdown(answer) {
   ## Test
   ${answer.tests}
   ## Questions
-  [Screenify Walkthrough]
+  [https://drive.google.com/file/d/1u7wKZKwsHi82ZlU6cszERkNscqyFU9Fq/view]
   Additional Questions can be sent to: ${answer.email}
   Other Projects can be viewed [here](www.github.com/${answer.github})
 `;
